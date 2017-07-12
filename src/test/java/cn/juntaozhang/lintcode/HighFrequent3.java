@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author juntao zhang
  */
-public class Class3 {
+public class HighFrequent3 {
     public List<String> findMissingRanges(int[] nums, int lower, int upper) {
         List<String> res = new ArrayList<>();
         addRange(res, (long) lower, (long) nums[0] - 1);
@@ -24,4 +24,6 @@ public class Class3 {
             res.add(start + "");
         }
     }
+
+
 }

@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author juntao zhang
  */
-public class Substring_Anagrams {
+public class SubstringAnagrams {
     public List<Integer> findAnagrams(String s, String p) {
         // Write your code here
         List<Integer> ans = new ArrayList<Integer>();

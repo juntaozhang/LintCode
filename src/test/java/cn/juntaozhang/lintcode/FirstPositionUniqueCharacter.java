@@ -7,7 +7,7 @@ import java.util.Stack;
 /**
  * @author juntao zhang
  */
-public class First_Position_Unique_Character {
+public class FirstPositionUniqueCharacter {
     /**
      * @param s a string
      * @return it's index

@@ -7,7 +7,7 @@ import java.util.LinkedList;
 /**
  * @author juntao zhang
  */
-public class Sliding_Window_Average_from_Data_Stream {
+public class SlidingWindowAverageFromDataStream {
     //======================================Sliding Window Average from Data Stream=====================================
     public class MovingAverage {
         private int[] cache;

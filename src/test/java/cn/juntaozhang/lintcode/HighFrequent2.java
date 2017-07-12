@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * @author juntao zhang
  */
-public class Class2 {
+public class HighFrequent2 {
     //================================================Mirror Numbers==============================================
     /**
      * @param num a string

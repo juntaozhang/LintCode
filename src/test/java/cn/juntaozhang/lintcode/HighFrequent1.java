@@ -10,7 +10,7 @@ import java.util.*;
  *
  * @author juntao zhang
  */
-public class Interview {
+public class HighFrequent1 {
     //================================================Strings Homomorphism==============================================
     /**
      * @param s a string
