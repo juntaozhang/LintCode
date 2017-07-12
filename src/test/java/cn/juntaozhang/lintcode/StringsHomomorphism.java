@@ -1,10 +1,14 @@
+package cn.juntaozhang.lintcode;
+
+import org.junit.Test;
+
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * @author juntao zhang
  */
-public class Strings_Homomorphism {
+public class StringsHomomorphism {
   /**
    * @param s a string
    * @param t a string
@@ -52,10 +56,11 @@ public class Strings_Homomorphism {
   }
 
 
-  public static void main(String[] args) {
-//    System.out.println(new Strings_Homomorphism().isIsomorphic("a`%ii,VEZQc_BSU%ObO5<sX81B/bOw+CNUd#Uav*P!Ax!#>hh,k#b/|>4ixFQZl+l!?bJjakbQbGglEb<g>Hf81m@A9GIvbd]qh?y__t+E(Iyv7zUEfZF{81VaM-0u?]tG=_fFR/XJ=X{-,oRpxE9u*VNYlM", "b`%ii-WE[Qc_BSV%OcO5<sX82B/cOw+CNVd#Vbv*P!Bx!#?hh-k#c/|?4ixFQ[l+l!?cJkbkcQcGhlEc<h?Hf82m@B9GIvcd]rh?y__t+E(Iyv7{VEf[F{82WbN/0u?]tG=_fFR/XJ=X{/-oRpxE9u*WNYlN"));
-//    System.out.println(new Strings_Homomorphism().isIsomorphic("aab","bbc"));
-//    System.out.println(new Strings_Homomorphism().isIsomorphic("egg", "ade"));
-    System.out.println(new Strings_Homomorphism().isIsomorphic2(null, null));
+  @Test
+  public void isIsomorphic() {
+//    System.out.println(isIsomorphic("a`%ii,VEZQc_BSU%ObO5<sX81B/bOw+CNUd#Uav*P!Ax!#>hh,k#b/|>4ixFQZl+l!?bJjakbQbGglEb<g>Hf81m@A9GIvbd]qh?y__t+E(Iyv7zUEfZF{81VaM-0u?]tG=_fFR/XJ=X{-,oRpxE9u*VNYlM", "b`%ii-WE[Qc_BSV%OcO5<sX82B/cOw+CNVd#Vbv*P!Bx!#?hh-k#c/|?4ixFQ[l+l!?cJkbkcQcGhlEc<h?Hf82m@B9GIvcd]rh?y__t+E(Iyv7{VEf[F{82WbN/0u?]tG=_fFR/XJ=X{/-oRpxE9u*WNYlN"));
+//    System.out.println(isIsomorphic("aab","bbc"));
+//    System.out.println(isIsomorphic("egg", "ade"));
+    System.out.println(isIsomorphic(null, null));
   }
 }
