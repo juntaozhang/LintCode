@@ -2,7 +2,7 @@ package cn.juntaozhang.lintcode;
 
 import org.junit.Test;
 
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @author juntao zhang
@@ -21,7 +21,7 @@ public class HighFrequent4 {
         public String toString() {
             final StringBuilder sb = new StringBuilder("TreeNode{");
             sb.append("val=").append(val);
-            sb.append(", left=").append(left);
+            sb.append("left=").append(left);
             sb.append(", right=").append(right);
             sb.append('}');
             return sb.toString();
@@ -44,7 +44,7 @@ public class HighFrequent4 {
 
         //找到最左边
         if (p != null) {
-            if( p.left == null && p.right == null )
+            if (p.left == null && p.right == null)
                 return pre;
 
             while (true) {
@@ -142,5 +142,80 @@ public class HighFrequent4 {
         System.out.println(searchRange(new int[]{1, 3, 5, 6, 8, 9}, 7));
     }
 
+    @Test
+    public void verticalOrder() {
+        TreeNode root = buildRoot("3,9,8,4,0,1,7,#,#,#,2,5");
+        System.out.println(verticalOrder(root));
+    }
+
+    public List<List<Integer>> verticalOrder(TreeNode root) {
+        int colMin = 0, colMax = 0;
+        List<List<Integer>> res = new ArrayList<>();
+        Map<Integer, List<Integer>> map = new HashMap<>();
+        Queue<TreeNode> q = new LinkedList<>();
+        Queue<Integer> q2 = new LinkedList<>();
+        q.offer(root);
+        q2.offer(0);
+        while (!q.isEmpty()) {
+            TreeNode n = q.poll();
+            int col = q2.poll();
+
+            List<Integer> l = map.get(col);
+            if (l == null) {
+                l = new ArrayList<>();
+                map.put(col, l);
+            }
+            l.add(n.val);
+
+            if (n.left != null) {
+                colMin = Math.min(colMin, col - 1);
+                q2.offer(col - 1);
+                q.offer(n.left);
+            }
+            if (n.right != null) {
+                colMax = Math.max(colMax, col + 1);
+                q2.offer(col + 1);
+                q.offer(n.right);
+            }
+        }
+        for (int i = colMin; i <= colMax; i++) {
+            if (map.get(i) != null) {
+                res.add(map.get(i));
+                System.out.println(map.get(i));
+            }
+        }
+        return res;
+    }
+
+    @Test
+    public void addStrings() {
+        System.out.println(addStrings("1999","1"));
+    }
+    public String addStrings(String num1, String num2) {
+        int scale = 0;
+        StringBuilder str = new StringBuilder();
+        for (int i = num1.length() - 1, j = num2.length() - 1; j >= 0 || i >= 0;j--,i-- ) {
+            int t = 0;
+            if (j >= 0 && i >= 0) {
+                t = (num1.charAt(i) - '0') + (num2.charAt(j) - '0') + scale;
+            } else if (j >=0 ) {
+                t = num2.charAt(j) - '0' + scale;
+            } else {
+                t = num1.charAt(i) - '0' + scale;
+            }
+            if (t >= 10) {
+                scale = 1;
+                t %= 10;
+            } else {
+                scale = 0;
+            }
+            str.insert(0, t);
+
+        }
+        if (scale == 1) {
+            str.insert(0, 1);
+        }
+        return str.toString();
+    }
 
 }
