@@ -34,13 +34,14 @@ public class Backpack {
                     dp[i] = Math.max(dp[i], dp[i - a] + a);
                 }
             }
+            System.out.println(Arrays.toString(dp));
         }
         return dp[m];
     }
 
     @Test
     public void backPack() {
-        System.out.println(backPack2(10, new int[]{3, 4, 8, 5}));
+        System.out.println(backPack2(10, new int[]{2, 3, 5, 2}));
     }
 
     //物品的空间和价值分离出来了，m 是size 求最大价值

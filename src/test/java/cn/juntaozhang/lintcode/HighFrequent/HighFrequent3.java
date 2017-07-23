@@ -1,4 +1,4 @@
-package cn.juntaozhang.lintcode;
+package cn.juntaozhang.lintcode.HighFrequent;
 
 import java.util.ArrayList;
 import java.util.List;

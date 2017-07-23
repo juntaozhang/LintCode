@@ -1,4 +1,4 @@
-package cn.juntaozhang.lintcode;
+package cn.juntaozhang.lintcode.HighFrequent;
 
 import org.junit.Test;
 
