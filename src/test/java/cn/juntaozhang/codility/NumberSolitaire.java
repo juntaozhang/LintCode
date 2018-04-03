@@ -11,6 +11,7 @@ public class NumberSolitaire {
 
     @Test
     public void solution() {
+
         System.out.println(solution(new int[]{1, -2, 0, 9, -1, -2, -1, -1, -1, 0, 0, 1}));
     }
 

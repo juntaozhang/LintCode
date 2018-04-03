@@ -8,7 +8,8 @@ import org.junit.Test;
 public class A {
     @Test
     public void test() {
-
+        long a = Integer.MAX_VALUE * Integer.MAX_VALUE * 1L;
+        System.out.println(a);
     }
 
 }
