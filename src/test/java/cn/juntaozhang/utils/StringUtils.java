@@ -21,6 +21,18 @@ public class StringUtils {
         }
     }
 
+    public static int[][] str2arr2(String s) {
+        s = s.replace("[[","").replace("]]","");
+        return Arrays.stream(s.split("],\\[")).map(l -> {
+            String[] arr = l.split(",");
+            int[] arr2 = new int[arr.length];
+            for (int i = 0; i < arr.length; i++) {
+                arr2[i] = Integer.parseInt(arr[i]);
+            }
+            return arr2;
+        }).collect(Collectors.toList()).toArray(new int[0][0]);
+    }
+
     public static int[][] str2arr(String s) {
         return Arrays.stream(s.split("],\\[")).map(l -> {
             String[] arr = l.split(",");
